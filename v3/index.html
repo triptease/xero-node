@@ -155,13 +155,26 @@
 					<li><a href="src/__integration_tests__">Integration tests</a></li>
 					<li><a href="https://github.com/XeroAPI/xero-node-sample-app">Sample app</a></li>
 				</ul>
+				<h2 id="migration-from-v2">Migration from V2</h2>
+				<p>The biggest change is the number of function calls you have to make to complete your task. This is consistant across all endpoints. It&#39;s not JSON in and JSON out. your object never gets modified:</p>
+				<p>Example:</p>
+				<p><code>`</code>// V2
+					let invoiceObj = xero.core.invoices.newInvoice(invoiceJSON);
+				let result = await invoiceObj.save()</p>
+				<pre><code>
+becomes:
+```<span class="hljs-comment">// V3</span>
+<span class="hljs-keyword">let</span> result = await xero.invoices.create(invoiceJSON);
+</code></pre><p>Please also review the documentation around how to construct the client object. You no longer have to use specifc constructors for your App Type. Instead this information is passed in with your config object.</p>
 				<h1 id="contributing">Contributing</h1>
 				<h2 id="local-development">Local development</h2>
 				<p>There are lots of TODOs in code and on our GitHub Projects kanban board - feel free to pick one off.</p>
 				<p>After you clone the repository, run <code>npm install</code> to install required dependencies.</p>
 				<h3 id="running-the-tests">Running the tests</h3>
+				<p>We need two private Apps to get around the ratelimits. They can be connected to the same Org.</p>
 				<ol>
 					<li>Copy <code>private-config-example.json</code> to <code>private-config.json</code> in the <a href="src/__integration_tests__">integration test directory</a>.</li>
+					<li>Copy it again to <code>1private-config.json</code> in the <a href="src/__integration_tests__">integration test directory</a>.</li>
 					<li>Overwrite the example values with your own from the <a href="https://developer.xero.com/myapps">Developer Portal</a>.</li>
 					<li>(Do the same for <code>partner-config-example.json</code> if required.)</li>
 					<li>Run <code>npm test</code></li>
@@ -201,22 +214,25 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/accountingapiclient.html" class="tsd-kind-icon">AccountingAPIClient</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-private">
 						<a href="classes/baseapiclient.html" class="tsd-kind-icon">BaseAPIClient</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-external">
+					<li class=" tsd-kind-class tsd-is-private">
 						<a href="classes/oauth1httpclient.html" class="tsd-kind-icon">OAuth1<wbr>Http<wbr>Client</a>
 					</li>
-					<li class=" tsd-kind-class">
+					<li class=" tsd-kind-class tsd-is-private">
 						<a href="classes/practiceapiclient.html" class="tsd-kind-icon">PracticeAPIClient</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/xeroerror.html" class="tsd-kind-icon">Xero<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/accesstoken.html" class="tsd-kind-icon">Access<wbr>Token</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/accountingapiresponse.html" class="tsd-kind-icon">AccountingAPIResponse</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/accountsresponse.html" class="tsd-kind-icon">Accounts<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -225,13 +241,19 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/allocation.html" class="tsd-kind-icon">Allocation</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/allocationsresponse.html" class="tsd-kind-icon">Allocations<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/apiconfiguration.html" class="tsd-kind-icon">Api<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/attachment.html" class="tsd-kind-icon">Attachment</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/attachmentsendpoint.html" class="tsd-kind-icon">Attachments<wbr>Endpoint</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/attachmentsresponse.html" class="tsd-kind-icon">Attachments<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -240,22 +262,22 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/banktransaction.html" class="tsd-kind-icon">Bank<wbr>Transaction</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/banktransactionsresponse.html" class="tsd-kind-icon">Bank<wbr>Transactions<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/banktransfer.html" class="tsd-kind-icon">Bank<wbr>Transfer</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/banktransfersresponse.html" class="tsd-kind-icon">Bank<wbr>Transfers<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/brandingtheme.html" class="tsd-kind-icon">Branding<wbr>Theme</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/brandingthemesresponse.html" class="tsd-kind-icon">Branding<wbr>Themes<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/cell.html" class="tsd-kind-icon">Cell</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -264,19 +286,19 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/contactgroup.html" class="tsd-kind-icon">Contact<wbr>Group</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/contactgroupsresponse.html" class="tsd-kind-icon">Contact<wbr>Groups<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/contactsresponse.html" class="tsd-kind-icon">Contacts<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/creditnote.html" class="tsd-kind-icon">Credit<wbr>Note</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/creditnotesresponse.html" class="tsd-kind-icon">Credit<wbr>Notes<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/currenciesresponse.html" class="tsd-kind-icon">Currencies<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -285,44 +307,29 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/employee.html" class="tsd-kind-icon">Employee</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/employeesresponse.html" class="tsd-kind-icon">Employees<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/expenseclaim.html" class="tsd-kind-icon">Expense<wbr>Claim</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/expenseclaimsresponse.html" class="tsd-kind-icon">Expense<wbr>Claims<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/field.html" class="tsd-kind-icon">Field</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/headerargs.html" class="tsd-kind-icon">Header<wbr>Args</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/iapiconfiguration.html" class="tsd-kind-icon">IApi<wbr>Configuration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/ihttpclient.html" class="tsd-kind-icon">IHttp<wbr>Client</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/ioauth1client.html" class="tsd-kind-icon">IOAuth1<wbr>Client</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/ioauth1configuration.html" class="tsd-kind-icon">IOAuth1<wbr>Configuration</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/ioauth1httpclient.html" class="tsd-kind-icon">IOAuth1<wbr>Http<wbr>Client</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/ioauth1state.html" class="tsd-kind-icon">IOAuth1<wbr>State</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/itoken.html" class="tsd-kind-icon">IToken</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/ixeroclientconfiguration.html" class="tsd-kind-icon">IXero<wbr>Client<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/invoice.html" class="tsd-kind-icon">Invoice</a>
@@ -330,16 +337,16 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/invoicereminder.html" class="tsd-kind-icon">Invoice<wbr>Reminder</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/invoiceremindersresponse.html" class="tsd-kind-icon">Invoice<wbr>Reminders<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/invoicesresponse.html" class="tsd-kind-icon">Invoices<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/item.html" class="tsd-kind-icon">Item</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/itemsresponse.html" class="tsd-kind-icon">Items<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -348,7 +355,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/journalline.html" class="tsd-kind-icon">Journal<wbr>Line</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/journalsresponse.html" class="tsd-kind-icon">Journals<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -357,19 +364,22 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/linkedtransaction.html" class="tsd-kind-icon">Linked<wbr>Transaction</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/linkedtransactionsresponse.html" class="tsd-kind-icon">Linked<wbr>Transactions<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/manualjournal.html" class="tsd-kind-icon">Manual<wbr>Journal</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/manualjournalsresponse.html" class="tsd-kind-icon">Manual<wbr>Journals<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
+						<a href="interfaces/oauth1configuration.html" class="tsd-kind-icon">OAuth1<wbr>Configuration</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/onlineinvoice.html" class="tsd-kind-icon">Online<wbr>Invoice</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/onlineinvoicesresponse.html" class="tsd-kind-icon">Online<wbr>Invoices<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -378,16 +388,16 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/organisation.html" class="tsd-kind-icon">Organisation</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/organisationcissettingresponse.html" class="tsd-kind-icon">OrganisationCISSetting<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/organisationresponse.html" class="tsd-kind-icon">Organisation<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/overpayment.html" class="tsd-kind-icon">Overpayment</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/overpaymentsresponse.html" class="tsd-kind-icon">Overpayments<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -396,7 +406,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/payment.html" class="tsd-kind-icon">Payment</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/paymentsresponse.html" class="tsd-kind-icon">Payments<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -405,7 +415,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/prepayment.html" class="tsd-kind-icon">Prepayment</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/prepaymentsresponse.html" class="tsd-kind-icon">Prepayments<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -414,7 +424,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/purchaseorder.html" class="tsd-kind-icon">Purchase<wbr>Order</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/purchaseordersresponse.html" class="tsd-kind-icon">Purchase<wbr>Orders<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -423,28 +433,31 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/receipt.html" class="tsd-kind-icon">Receipt</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/receiptsresponse.html" class="tsd-kind-icon">Receipts<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/repeatinginvoice.html" class="tsd-kind-icon">Repeating<wbr>Invoice</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/repeatinginvoicesresponse.html" class="tsd-kind-icon">Repeating<wbr>Invoices<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/report.html" class="tsd-kind-icon">Report</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/reportsresponse.html" class="tsd-kind-icon">Reports<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/requesttoken.html" class="tsd-kind-icon">Request<wbr>Token</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/row.html" class="tsd-kind-icon">Row</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/schedule.html" class="tsd-kind-icon">Schedule</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/summariseerrors.html" class="tsd-kind-icon">Summarise<wbr>Errors</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -453,13 +466,13 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/taxrate.html" class="tsd-kind-icon">Tax<wbr>Rate</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/taxratesresponse.html" class="tsd-kind-icon">Tax<wbr>Rates<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/tracking.html" class="tsd-kind-icon">Tracking</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/trackingcategoriesresponse.html" class="tsd-kind-icon">Tracking<wbr>Categories<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -474,113 +487,29 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/user.html" class="tsd-kind-icon">User</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/usersresponse.html" class="tsd-kind-icon">Users<wbr>Response</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/validationerror.html" class="tsd-kind-icon">Validation<wbr>Error</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-is-private">
 						<a href="interfaces/warning.html" class="tsd-kind-icon">Warning</a>
 					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#delay" class="tsd-kind-icon">delay</a>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/xeroclientconfiguration.html" class="tsd-kind-icon">Xero<wbr>Client<wbr>Configuration</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-external">
+					<li class=" tsd-kind-function tsd-is-private">
 						<a href="globals.html#generatequerystring" class="tsd-kind-icon">generate<wbr>Query<wbr>String</a>
 					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getloginconfig" class="tsd-kind-icon">get<wbr>Login<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateaccountid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Account<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatebanktransferid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Bank<wbr>Transfer<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatecontactgroupid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Contact<wbr>Group<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatecontactid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Contact<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatecontactidincontactgroup" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Contact<wbr>IdIn<wbr>Contact<wbr>Group</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateemployeeid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Employee<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateexpenseclaimid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Expense<wbr>Claim<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateinvoiceid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Invoice<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateitemid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Item<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatemanualjournalid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Manual<wbr>Journal<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatepaymentid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Payment<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreatereceiptid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>Receipt<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getorcreateuserid" class="tsd-kind-icon">get<wbr>OrCreate<wbr>User<wbr>Id</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getpartnerappconfig" class="tsd-kind-icon">get<wbr>Partner<wbr>App<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getprivateconfig" class="tsd-kind-icon">get<wbr>Private<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-external">
+					<li class=" tsd-kind-function tsd-is-private">
 						<a href="globals.html#getstringfromfile" class="tsd-kind-icon">get<wbr>String<wbr>From<wbr>File</a>
 					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#isuuid" class="tsd-kind-icon">isUUID</a>
-					</li>
-					<li class=" tsd-kind-function tsd-is-external">
+					<li class=" tsd-kind-function tsd-is-private">
 						<a href="globals.html#mapconfig" class="tsd-kind-icon">map<wbr>Config</a>
 					</li>
-					<li class=" tsd-kind-function tsd-is-external">
+					<li class=" tsd-kind-function tsd-is-private">
 						<a href="globals.html#mapstate" class="tsd-kind-icon">map<wbr>State</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#readline" class="tsd-kind-icon">read<wbr>Line</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#setjesttimeout" class="tsd-kind-icon">set<wbr>Jest<wbr>Timeout</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#allcontactgroups" class="tsd-kind-icon">all<wbr>Contact<wbr>Groups</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#createinvoicewithvalidationerror" class="tsd-kind-icon">create<wbr>Invoice<wbr>With<wbr>Validation<wbr>Error</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#createresponse" class="tsd-kind-icon">create<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#createvalidationresponse" class="tsd-kind-icon">create<wbr>Validation<wbr>Response</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#getall" class="tsd-kind-icon">get<wbr>All</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#getsingle" class="tsd-kind-icon">get<wbr>Single</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#multipleinvoices" class="tsd-kind-icon">multiple<wbr>Invoices</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#singleinvoice" class="tsd-kind-icon">single<wbr>Invoice</a>
-					</li>
-					<li class=" tsd-kind-object-literal">
-						<a href="globals.html#updatedeleted" class="tsd-kind-icon">update<wbr>Deleted</a>
 					</li>
 				</ul>
 			</nav>

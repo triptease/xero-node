@@ -115,23 +115,23 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>AccountingAPIClient<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/ixeroclientconfiguration.html" class="tsd-signature-type">IXeroClientConfiguration</a>, authState<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ioauth1state.html" class="tsd-signature-type">IOAuth1State</a>, _oAuth1HttpClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="accountingapiclient.html" class="tsd-signature-type">AccountingAPIClient</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>AccountingAPIClient<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="../interfaces/xeroclientconfiguration.html" class="tsd-signature-type">XeroClientConfiguration</a>, authState<span class="tsd-signature-symbol">?: </span><a href="../interfaces/accesstoken.html" class="tsd-signature-type">AccessToken</a>, _oAuth1HttpClient<span class="tsd-signature-symbol">?: </span><a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="accountingapiclient.html" class="tsd-signature-type">AccountingAPIClient</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="baseapiclient.html">BaseAPIClient</a>.<a href="baseapiclient.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L26">AccountingAPIClient.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L33">AccountingAPIClient.ts:33</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <a href="../interfaces/ixeroclientconfiguration.html" class="tsd-signature-type">IXeroClientConfiguration</a></h5>
+									<h5>options: <a href="../interfaces/xeroclientconfiguration.html" class="tsd-signature-type">XeroClientConfiguration</a></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> authState: <a href="../interfaces/ioauth1state.html" class="tsd-signature-type">IOAuth1State</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> authState: <a href="../interfaces/accesstoken.html" class="tsd-signature-type">AccessToken</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> _oAuth1HttpClient: <a href="../interfaces/ioauth1httpclient.html" class="tsd-signature-type">IOAuth1HttpClient</a></h5>
@@ -151,7 +151,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="baseapiclient.html">BaseAPIClient</a>.<a href="baseapiclient.html#oauth1client">oauth1Client</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/internals/BaseAPIClient.ts#L42">internals/BaseAPIClient.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/internals/BaseAPIClient.ts#L43">internals/BaseAPIClient.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,23 +164,18 @@
 					<div class="tsd-signature tsd-kind-icon">accounts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L66">AccountingAPIClient.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L73">AccountingAPIClient.ts:73</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="accounts.attachments" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;accounts&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;accounts&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L99">AccountingAPIClient.ts:99</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L106">AccountingAPIClient.ts:106</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="accounts.create" class="tsd-anchor"></a>
@@ -192,7 +187,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L78">AccountingAPIClient.ts:78</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L85">AccountingAPIClient.ts:85</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -215,7 +210,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L94">AccountingAPIClient.ts:94</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L101">AccountingAPIClient.ts:101</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -240,7 +235,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L67">AccountingAPIClient.ts:67</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L74">AccountingAPIClient.ts:74</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -263,7 +258,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L83">AccountingAPIClient.ts:83</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L90">AccountingAPIClient.ts:90</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -288,23 +283,18 @@
 					<div class="tsd-signature tsd-kind-icon">bank<wbr>Transactions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L102">AccountingAPIClient.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L109">AccountingAPIClient.ts:109</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="banktransactions.attachments-1" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;banktransactions&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;banktransactions&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L122">AccountingAPIClient.ts:122</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L129">AccountingAPIClient.ts:129</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="banktransactions.create-1" class="tsd-anchor"></a>
@@ -316,7 +306,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L114">AccountingAPIClient.ts:114</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L121">AccountingAPIClient.ts:121</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -342,7 +332,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L103">AccountingAPIClient.ts:103</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L110">AccountingAPIClient.ts:110</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -365,7 +355,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L118">AccountingAPIClient.ts:118</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L125">AccountingAPIClient.ts:125</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -388,23 +378,18 @@
 					<div class="tsd-signature tsd-kind-icon">bank<wbr>Transfers<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L125">AccountingAPIClient.ts:125</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L132">AccountingAPIClient.ts:132</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="banktransfers.attachments-2" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;banktransfers&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;banktransfers&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L141">AccountingAPIClient.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L148">AccountingAPIClient.ts:148</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="banktransfers.create-2" class="tsd-anchor"></a>
@@ -416,7 +401,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L136">AccountingAPIClient.ts:136</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L143">AccountingAPIClient.ts:143</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -444,7 +429,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L126">AccountingAPIClient.ts:126</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L133">AccountingAPIClient.ts:133</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -464,7 +449,7 @@
 					<div class="tsd-signature tsd-kind-icon">branding<wbr>Themes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L144">AccountingAPIClient.ts:144</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L151">AccountingAPIClient.ts:151</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -477,7 +462,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L145">AccountingAPIClient.ts:145</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L152">AccountingAPIClient.ts:152</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -499,7 +484,7 @@
 					<div class="tsd-signature tsd-kind-icon">contactgroups<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L156">AccountingAPIClient.ts:156</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L163">AccountingAPIClient.ts:163</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -512,7 +497,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L169">AccountingAPIClient.ts:169</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L176">AccountingAPIClient.ts:176</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -540,7 +525,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L157">AccountingAPIClient.ts:157</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L164">AccountingAPIClient.ts:164</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -563,7 +548,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L174">AccountingAPIClient.ts:174</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L181">AccountingAPIClient.ts:181</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -587,7 +572,7 @@
 						<div class="tsd-signature tsd-kind-icon">contacts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L184">AccountingAPIClient.ts:184</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L191">AccountingAPIClient.ts:191</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -600,7 +585,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L199">AccountingAPIClient.ts:199</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L206">AccountingAPIClient.ts:206</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -628,7 +613,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L185">AccountingAPIClient.ts:185</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L192">AccountingAPIClient.ts:192</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -651,23 +636,18 @@
 					<div class="tsd-signature tsd-kind-icon">contacts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L212">AccountingAPIClient.ts:212</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L219">AccountingAPIClient.ts:219</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="contacts-1.attachments-3" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;contacts&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;contacts&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L255">AccountingAPIClient.ts:255</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L262">AccountingAPIClient.ts:262</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="contacts-1.create-5" class="tsd-anchor"></a>
@@ -679,7 +659,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L226">AccountingAPIClient.ts:226</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L233">AccountingAPIClient.ts:233</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -707,7 +687,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L213">AccountingAPIClient.ts:213</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L220">AccountingAPIClient.ts:220</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -730,7 +710,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L231">AccountingAPIClient.ts:231</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L238">AccountingAPIClient.ts:238</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -754,7 +734,7 @@
 						<div class="tsd-signature tsd-kind-icon">CISsettings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L242">AccountingAPIClient.ts:242</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L249">AccountingAPIClient.ts:249</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -767,7 +747,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L243">AccountingAPIClient.ts:243</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L250">AccountingAPIClient.ts:250</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -790,23 +770,18 @@
 					<div class="tsd-signature tsd-kind-icon">credit<wbr>Notes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L258">AccountingAPIClient.ts:258</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L265">AccountingAPIClient.ts:265</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="creditnotes.attachments-4" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;creditnotes&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;creditnotes&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L303">AccountingAPIClient.ts:303</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L310">AccountingAPIClient.ts:310</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="creditnotes.create-6" class="tsd-anchor"></a>
@@ -818,7 +793,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L282">AccountingAPIClient.ts:282</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L289">AccountingAPIClient.ts:289</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -844,7 +819,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L259">AccountingAPIClient.ts:259</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L266">AccountingAPIClient.ts:266</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -867,7 +842,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L270">AccountingAPIClient.ts:270</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L277">AccountingAPIClient.ts:277</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -892,7 +867,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L286">AccountingAPIClient.ts:286</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L293">AccountingAPIClient.ts:293</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -914,7 +889,7 @@
 						<div class="tsd-signature tsd-kind-icon">allocations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L290">AccountingAPIClient.ts:290</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L297">AccountingAPIClient.ts:297</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -927,7 +902,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L291">AccountingAPIClient.ts:291</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L298">AccountingAPIClient.ts:298</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -953,7 +928,7 @@
 					<div class="tsd-signature tsd-kind-icon">currencies<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L306">AccountingAPIClient.ts:306</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L313">AccountingAPIClient.ts:313</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -966,7 +941,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L312">AccountingAPIClient.ts:312</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L319">AccountingAPIClient.ts:319</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -989,7 +964,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L307">AccountingAPIClient.ts:307</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L314">AccountingAPIClient.ts:314</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1009,7 +984,7 @@
 					<div class="tsd-signature tsd-kind-icon">employees<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L318">AccountingAPIClient.ts:318</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L325">AccountingAPIClient.ts:325</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1022,7 +997,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L331">AccountingAPIClient.ts:331</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L338">AccountingAPIClient.ts:338</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1045,7 +1020,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L319">AccountingAPIClient.ts:319</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L326">AccountingAPIClient.ts:326</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1068,7 +1043,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L335">AccountingAPIClient.ts:335</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L342">AccountingAPIClient.ts:342</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1088,7 +1063,7 @@
 					<div class="tsd-signature tsd-kind-icon">expenseclaims<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L341">AccountingAPIClient.ts:341</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L348">AccountingAPIClient.ts:348</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1101,7 +1076,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L351">AccountingAPIClient.ts:351</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L358">AccountingAPIClient.ts:358</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1129,7 +1104,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L342">AccountingAPIClient.ts:342</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L349">AccountingAPIClient.ts:349</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1152,7 +1127,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L355">AccountingAPIClient.ts:355</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L362">AccountingAPIClient.ts:362</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1177,7 +1152,7 @@
 					<div class="tsd-signature tsd-kind-icon">invoice<wbr>Reminders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L366">AccountingAPIClient.ts:366</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L373">AccountingAPIClient.ts:373</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1190,7 +1165,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L367">AccountingAPIClient.ts:367</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L374">AccountingAPIClient.ts:374</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/invoiceremindersresponse.html" class="tsd-signature-type">InvoiceRemindersResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1204,23 +1179,18 @@
 					<div class="tsd-signature tsd-kind-icon">invoices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L373">AccountingAPIClient.ts:373</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L380">AccountingAPIClient.ts:380</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="invoices.attachments-5" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;invoices&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;invoices&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L437">AccountingAPIClient.ts:437</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L444">AccountingAPIClient.ts:444</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="invoices.create-11" class="tsd-anchor"></a>
@@ -1232,7 +1202,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L404">AccountingAPIClient.ts:404</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L411">AccountingAPIClient.ts:411</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1258,7 +1228,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L374">AccountingAPIClient.ts:374</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L381">AccountingAPIClient.ts:381</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1281,7 +1251,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L389">AccountingAPIClient.ts:389</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L396">AccountingAPIClient.ts:396</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1306,7 +1276,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L409">AccountingAPIClient.ts:409</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L416">AccountingAPIClient.ts:416</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1328,7 +1298,7 @@
 						<div class="tsd-signature tsd-kind-icon">online<wbr>Invoice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L424">AccountingAPIClient.ts:424</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L431">AccountingAPIClient.ts:431</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1341,7 +1311,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L425">AccountingAPIClient.ts:425</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L432">AccountingAPIClient.ts:432</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1364,7 +1334,7 @@
 					<div class="tsd-signature tsd-kind-icon">items<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L455">AccountingAPIClient.ts:455</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L462">AccountingAPIClient.ts:462</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1377,7 +1347,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L470">AccountingAPIClient.ts:470</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L477">AccountingAPIClient.ts:477</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1405,7 +1375,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L483">AccountingAPIClient.ts:483</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L490">AccountingAPIClient.ts:490</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1430,7 +1400,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L456">AccountingAPIClient.ts:456</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L463">AccountingAPIClient.ts:463</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1453,7 +1423,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L474">AccountingAPIClient.ts:474</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L481">AccountingAPIClient.ts:481</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1478,7 +1448,7 @@
 					<div class="tsd-signature tsd-kind-icon">journals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L489">AccountingAPIClient.ts:489</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L496">AccountingAPIClient.ts:496</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1491,7 +1461,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L490">AccountingAPIClient.ts:490</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L497">AccountingAPIClient.ts:497</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1511,7 +1481,7 @@
 					<div class="tsd-signature tsd-kind-icon">linked<wbr>Transactions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L505">AccountingAPIClient.ts:505</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L512">AccountingAPIClient.ts:512</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1524,7 +1494,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L517">AccountingAPIClient.ts:517</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L524">AccountingAPIClient.ts:524</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1550,7 +1520,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L530">AccountingAPIClient.ts:530</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L537">AccountingAPIClient.ts:537</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1575,7 +1545,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L506">AccountingAPIClient.ts:506</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L513">AccountingAPIClient.ts:513</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1598,7 +1568,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L521">AccountingAPIClient.ts:521</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L528">AccountingAPIClient.ts:528</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1621,23 +1591,18 @@
 					<div class="tsd-signature tsd-kind-icon">manual<wbr>Journals<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L541">AccountingAPIClient.ts:541</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L548">AccountingAPIClient.ts:548</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="manualjournals.attachments-6" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;manualjournals&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;manualjournals&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L565">AccountingAPIClient.ts:565</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L572">AccountingAPIClient.ts:572</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="manualjournals.create-14" class="tsd-anchor"></a>
@@ -1649,7 +1614,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L552">AccountingAPIClient.ts:552</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L559">AccountingAPIClient.ts:559</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1677,7 +1642,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L542">AccountingAPIClient.ts:542</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L549">AccountingAPIClient.ts:549</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1700,7 +1665,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L556">AccountingAPIClient.ts:556</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L563">AccountingAPIClient.ts:563</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1725,7 +1690,7 @@
 					<div class="tsd-signature tsd-kind-icon">organisation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L568">AccountingAPIClient.ts:568</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L575">AccountingAPIClient.ts:575</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1738,7 +1703,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L569">AccountingAPIClient.ts:569</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L576">AccountingAPIClient.ts:576</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/organisationresponse.html" class="tsd-signature-type">OrganisationResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1751,7 +1716,7 @@
 						<div class="tsd-signature tsd-kind-icon">CISSettings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L573">AccountingAPIClient.ts:573</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L580">AccountingAPIClient.ts:580</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1764,7 +1729,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L574">AccountingAPIClient.ts:574</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L581">AccountingAPIClient.ts:581</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1787,7 +1752,7 @@
 					<div class="tsd-signature tsd-kind-icon">overpayments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L587">AccountingAPIClient.ts:587</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L594">AccountingAPIClient.ts:594</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1800,7 +1765,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L588">AccountingAPIClient.ts:588</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L595">AccountingAPIClient.ts:595</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1819,7 +1784,7 @@
 						<div class="tsd-signature tsd-kind-icon">allocations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L597">AccountingAPIClient.ts:597</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L604">AccountingAPIClient.ts:604</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1832,7 +1797,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L598">AccountingAPIClient.ts:598</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L605">AccountingAPIClient.ts:605</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1858,7 +1823,7 @@
 					<div class="tsd-signature tsd-kind-icon">payments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L605">AccountingAPIClient.ts:605</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L612">AccountingAPIClient.ts:612</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -1871,7 +1836,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L617">AccountingAPIClient.ts:617</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L624">AccountingAPIClient.ts:624</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1899,7 +1864,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L606">AccountingAPIClient.ts:606</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L613">AccountingAPIClient.ts:613</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1922,7 +1887,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L621">AccountingAPIClient.ts:621</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L628">AccountingAPIClient.ts:628</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1947,23 +1912,18 @@
 					<div class="tsd-signature tsd-kind-icon">prepayments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L633">AccountingAPIClient.ts:633</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L640">AccountingAPIClient.ts:640</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="prepayments.attachments-7" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;prepayments&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;prepayments&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L653">AccountingAPIClient.ts:653</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L660">AccountingAPIClient.ts:660</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="prepayments.get-22" class="tsd-anchor"></a>
@@ -1975,7 +1935,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L634">AccountingAPIClient.ts:634</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L641">AccountingAPIClient.ts:641</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1994,7 +1954,7 @@
 						<div class="tsd-signature tsd-kind-icon">allocations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L645">AccountingAPIClient.ts:645</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L652">AccountingAPIClient.ts:652</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2007,7 +1967,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L646">AccountingAPIClient.ts:646</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L653">AccountingAPIClient.ts:653</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2033,7 +1993,7 @@
 					<div class="tsd-signature tsd-kind-icon">purchase<wbr>Orders<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L656">AccountingAPIClient.ts:656</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L663">AccountingAPIClient.ts:663</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2046,7 +2006,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L671">AccountingAPIClient.ts:671</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L678">AccountingAPIClient.ts:678</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2074,7 +2034,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L657">AccountingAPIClient.ts:657</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L664">AccountingAPIClient.ts:664</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2097,7 +2057,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L676">AccountingAPIClient.ts:676</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L683">AccountingAPIClient.ts:683</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2122,23 +2082,18 @@
 					<div class="tsd-signature tsd-kind-icon">receipts<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L687">AccountingAPIClient.ts:687</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L694">AccountingAPIClient.ts:694</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="receipts.attachments-8" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;receipts&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;receipts&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L711">AccountingAPIClient.ts:711</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L718">AccountingAPIClient.ts:718</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="receipts.create-19" class="tsd-anchor"></a>
@@ -2150,7 +2105,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L698">AccountingAPIClient.ts:698</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L705">AccountingAPIClient.ts:705</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2176,7 +2131,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L688">AccountingAPIClient.ts:688</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L695">AccountingAPIClient.ts:695</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2199,7 +2154,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L702">AccountingAPIClient.ts:702</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L709">AccountingAPIClient.ts:709</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2222,23 +2177,18 @@
 					<div class="tsd-signature tsd-kind-icon">repeating<wbr>Invoices<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L440">AccountingAPIClient.ts:440</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L447">AccountingAPIClient.ts:447</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
 						<a name="repeatinginvoices.attachments-9" class="tsd-anchor"></a>
 						<h3>attachments</h3>
-						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;repeatinginvoices&#x27;)</span></div>
+						<div class="tsd-signature tsd-kind-icon">attachments<span class="tsd-signature-symbol">:</span> <a href="../interfaces/attachmentsendpoint.html" class="tsd-signature-type">AttachmentsEndpoint</a><span class="tsd-signature-symbol"> =&nbsp;this.generateAttachmentsEndpoint(&#x27;repeatinginvoices&#x27;)</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L452">AccountingAPIClient.ts:452</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L459">AccountingAPIClient.ts:459</a></li>
 							</ul>
 						</aside>
-						<div class="tsd-type-declaration">
-							<h4>Type declaration</h4>
-							<ul class="tsd-parameters">
-							</ul>
-						</div>
 					</section>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
 						<a name="repeatinginvoices.get-25" class="tsd-anchor"></a>
@@ -2250,7 +2200,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L441">AccountingAPIClient.ts:441</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L448">AccountingAPIClient.ts:448</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2270,7 +2220,7 @@
 					<div class="tsd-signature tsd-kind-icon">reports<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L714">AccountingAPIClient.ts:714</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L721">AccountingAPIClient.ts:721</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2283,7 +2233,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L715">AccountingAPIClient.ts:715</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L722">AccountingAPIClient.ts:722</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2305,7 +2255,7 @@
 					<div class="tsd-signature tsd-kind-icon">tax<wbr>Rates<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L728">AccountingAPIClient.ts:728</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L735">AccountingAPIClient.ts:735</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2318,7 +2268,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L738">AccountingAPIClient.ts:738</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L745">AccountingAPIClient.ts:745</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2341,7 +2291,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L729">AccountingAPIClient.ts:729</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L736">AccountingAPIClient.ts:736</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2364,7 +2314,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L742">AccountingAPIClient.ts:742</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L749">AccountingAPIClient.ts:749</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2384,7 +2334,7 @@
 					<div class="tsd-signature tsd-kind-icon">tracking<wbr>Categories<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L748">AccountingAPIClient.ts:748</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L755">AccountingAPIClient.ts:755</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2397,7 +2347,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L761">AccountingAPIClient.ts:761</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L768">AccountingAPIClient.ts:768</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2420,7 +2370,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L774">AccountingAPIClient.ts:774</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L781">AccountingAPIClient.ts:781</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2445,7 +2395,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L749">AccountingAPIClient.ts:749</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L756">AccountingAPIClient.ts:756</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2468,7 +2418,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L765">AccountingAPIClient.ts:765</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L772">AccountingAPIClient.ts:772</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2492,7 +2442,7 @@
 						<div class="tsd-signature tsd-kind-icon">tracking<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L778">AccountingAPIClient.ts:778</a></li>
+								<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L785">AccountingAPIClient.ts:785</a></li>
 							</ul>
 						</aside>
 						<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2505,7 +2455,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L779">AccountingAPIClient.ts:779</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L786">AccountingAPIClient.ts:786</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2533,7 +2483,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L798">AccountingAPIClient.ts:798</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L805">AccountingAPIClient.ts:805</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2558,7 +2508,7 @@
 								<li class="tsd-description">
 									<aside class="tsd-sources">
 										<ul>
-											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L788">AccountingAPIClient.ts:788</a></li>
+											<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L795">AccountingAPIClient.ts:795</a></li>
 										</ul>
 									</aside>
 									<h4 class="tsd-parameters-title">Parameters</h4>
@@ -2584,7 +2534,7 @@
 					<div class="tsd-signature tsd-kind-icon">users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L805">AccountingAPIClient.ts:805</a></li>
+							<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L812">AccountingAPIClient.ts:812</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-object-literal">
@@ -2597,7 +2547,7 @@
 							<li class="tsd-description">
 								<aside class="tsd-sources">
 									<ul>
-										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/339ad81/src/AccountingAPIClient.ts#L806">AccountingAPIClient.ts:806</a></li>
+										<li>Defined in <a href="https://github.com/XeroAPI/xero-node/blob/2deb58e/src/AccountingAPIClient.ts#L813">AccountingAPIClient.ts:813</a></li>
 									</ul>
 								</aside>
 								<h4 class="tsd-parameters-title">Parameters</h4>
