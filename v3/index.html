@@ -135,6 +135,16 @@
     <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> xero.invoices.get();
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Number of invoices:'</span>, result.Invoices.length);
 
+    <span class="hljs-comment">// You can refresh your access token when it's getting close to expiring</span>
+    <span class="hljs-keyword">if</span>((<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>) - accessToken.oauth_expires_at &gt; <span class="hljs-number">60</span>*<span class="hljs-number">30</span>*<span class="hljs-number">1000</span>){
+        <span class="hljs-keyword">let</span> newToken = <span class="hljs-keyword">await</span> xero.oauth1Client.refreshAccessToken();
+        <span class="hljs-comment">// Remember to store the new access token in your data store</span>
+    }
+
+    <span class="hljs-comment">// The SDK will hold the latest acess token, so you can make more calls</span>
+    <span class="hljs-keyword">const</span> result1 = <span class="hljs-keyword">await</span> xero.invoices.get();
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Number of invoices:'</span>, result1.Invoices.length);
+
     <span class="hljs-comment">// When making future calls, you can initialise the Xero client direectly with the stored access token:</span>
 
     <span class="hljs-keyword">const</span> storedAccessToken = {
@@ -158,13 +168,12 @@
 				<h2 id="migration-from-v2">Migration from V2</h2>
 				<p>The biggest change is the number of function calls you have to make to complete your task. This is consistant across all endpoints. It&#39;s not JSON in and JSON out. your object never gets modified:</p>
 				<p>Example:</p>
-				<p><code>`</code>// V2
-					let invoiceObj = xero.core.invoices.newInvoice(invoiceJSON);
-				let result = await invoiceObj.save()</p>
-				<pre><code>
-becomes:
-```<span class="hljs-comment">// V3</span>
-<span class="hljs-keyword">let</span> result = await xero.invoices.create(invoiceJSON);
+				<pre><code><span class="hljs-comment">// V2</span>
+<span class="hljs-keyword">let</span> invoiceObj = xero.core.invoices.newInvoice(invoiceJSON);
+<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> invoiceObj.save()
+</code></pre><p>becomes:</p>
+				<pre><code><span class="hljs-comment">// V3</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">await</span> xero.invoices.create(invoiceJSON);
 </code></pre><p>Please also review the documentation around how to construct the client object. You no longer have to use specifc constructors for your App Type. Instead this information is passed in with your config object.</p>
 				<h1 id="contributing">Contributing</h1>
 				<h2 id="local-development">Local development</h2>
