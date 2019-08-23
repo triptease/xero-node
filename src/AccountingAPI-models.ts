@@ -144,7 +144,7 @@ export interface Prepayment {
 }
 
 export interface Allocation {
-	AppliedAmount?: number;
+	Amount?: number;
 	Date?: string;
 	Invoice?: Invoice;
 }
@@ -183,6 +183,7 @@ export interface Invoice {
 	CreditNotes?: CreditNote[];
 	Overpayments?: Overpayment[];
 	CISDeduction?: number;
+	BrandingThemeID?: string;
 	AmountDue?: number;
 	AmountPaid?: number;
 	AmountCredited?: number;
@@ -203,6 +204,7 @@ export interface Invoice {
 	Total?: number;
 	UpdatedDateUTC?: string;
 	CurrencyCode?: string;
+	CurrencyRate?: number;
 	History?: HistoryRecord[];
 }
 
@@ -247,6 +249,7 @@ export interface HistoryRecord {
 
 export interface Contact {
 	ContactID?: string;
+	ContactNumber?: string;
 	ContactStatus?: string;
 	Name?: string;
 	FirstName?: string;
